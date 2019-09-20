@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour {
         mInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(mInput * speed, rb.velocity.y);
 
+        /* Bug #1 - Invisibility When Flipped
         // If Player Right then Flip Right; If Player Left then Flip Left
         if(facingRight == false && mInput > 0) {
 
@@ -44,7 +45,7 @@ public class PlayerController : MonoBehaviour {
 
             Flip();
 
-        }
+        }*/
 
     }
 
@@ -71,6 +72,7 @@ public class PlayerController : MonoBehaviour {
 
     }
 
+    /* Causes Invisibiltiy Bug When Flipped (Currently When Player Goes Left
     // Flip Player
     void Flip() {
 
@@ -79,6 +81,6 @@ public class PlayerController : MonoBehaviour {
         Scalar.x *= -1;
         transform.localScale = Scalar;
 
-    }
-
+    }*/
+    
 }
